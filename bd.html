@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Swati!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .card {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: cardAnimation 1.5s ease-in-out;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: bounceIn 2s;
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            animation: fadeIn 3s;
+        }
+
+        .heart {
+            font-size: 4rem;
+            color: red;
+            display: inline-block;
+            margin-left: 10px;
+        }
+
+        .options {
+            margin-top: 20px;
+            position: relative;
+        }
+
+        button {
+            font-size: 1.2rem;
+            padding: 15px 30px;
+            margin: 10px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ffcc00;
+        }
+
+        #noBtn {
+            background-color: #ff6666;
+            position: absolute;
+            left: 30%; /* Position it initially */
+        }
+
+        #yesBtn {
+            background-color: #66cc66;
+            position: absolute;
+            right: 30%; /* Position it initially */
+        }
+
+        .proposal {
+            display: none;
+            font-size: 1.8rem;
+            color: red; /* Changed this to red */
+            margin-top: 30px;
+            font-weight: bold;
+            animation: fadeIn 4s;
+        }
+
+        .birthdayMessage {
+            display: none;
+            font-size: 1.8rem;
+            color: #ffffff;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        .extraWishes {
+            display: none;
+            font-size: 1.5rem;
+            color: #ffffff;
+            margin-top: 20px;
+            font-weight: normal;
+        }
+
+        @keyframes cardAnimation {
+            0% { transform: scale(0.9); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes bounceIn {
+            0% { transform: translateY(-200px); opacity: 0; }
+            60% { transform: translateY(30px); opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.7; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.7; }
+        }
+
+        @keyframes slideAway {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(300px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Happy Birthday, Swati!</h1>
+        <p>Every moment with you is special, but today, I want to make sure you feel extra loved. You are my everything, and I’m so lucky to have you in my life. 💖</p>
+        <div class="heart">❤</div>
+        <p>Wishing you all the happiness in the world today and always. 💫</p>
+
+        <p><strong>Your Ashish asks:</strong><br>Do you love me?</p>
+
+        <div class="options">
+            <button id="yesBtn" onclick="showProposal()">Yes</button>
+            <button id="noBtn" onclick="moveNoButton()">No</button>
+        </div>
+
+        <div class="proposal" id="proposal">
+            Will you marry me, Swati? 💍
+        </div>
+
+        <div class="birthdayMessage" id="birthdayMessage">
+            Happy Birthday, my love Swati! I am so happy to be spending this special day with you. 🥰💖
+        </div>
+
+        <div class="extraWishes" id="extraWishes">
+            <p>❤ "Every moment with you feels like a dream come true." 💭</p>
+            <p>❤ "You are the reason I smile every day. I feel so lucky to have you in my life." 😊</p>
+            <p>❤ "You’re my first thought in the morning and my last thought at night. My heart beats only for you." 🕰️</p>
+            <p>❤ "I found my home in your arms, my heart in your smile, and my happiness in your love." 🏡</p>
+            <p>❤ "Being with you is like reading the most beautiful love story, but even better, because it’s ours." 📖</p>
+            <p>❤ "No words can ever express how much I love you, but I’ll spend my whole life trying." 💌</p>
+            <p>❤ "Every time I look at you, I fall in love all over again." 💘</p>
+            <p>❤ "I never knew what love was until I met you. You’ve redefined happiness for me." 🥰</p>
+            <p>❤ "You complete me in ways I never thought were possible. With you, I feel whole." 🌟</p>
+            <p>❤ "You’re not just the love of my life; you are my life." 💖</p>
+            <p>❤ "Love isn’t about how many days we’ve been together, it’s about how much we love each other every single day." 🗓️</p>
+            <p>❤ "I am forever grateful to have you as my partner in this beautiful adventure called life." 🚀</p>
+            <p>❤ "Happy Birthday to the person who has my heart. You make everything better, and I can't wait to celebrate many more birthdays by your side!" 💕</p>
+        </div>
+    </div>
+
+    <script>
+        function showProposal() {
+            // Show the proposal and birthday message
+            document.getElementById('proposal').style.display = 'block';
+            document.getElementById('birthdayMessage').style.display = 'block';
+            document.getElementById('extraWishes').style.display = 'block'; // Show extra wishes and loving quotes
+            
+            // Hide the buttons after clicking "Yes"
+            document.getElementById('yesBtn').style.display = 'none';
+            document.getElementById('noBtn').style.display = 'none';
+        }
+
+        function moveNoButton() {
+            // Get the 'No' button
+            const noButton = document.getElementById('noBtn');
+            
+            // Set a random position for the 'No' button to jump to
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 200)); // Ensure button stays within screen
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 50)); // Ensure button stays within screen
+            
+            // Prevent the button from overlapping with the 'Yes' button
+            if (randomX < 400) randomX = 400;  // Ensure it's far enough from 'Yes' button
+
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
+        }
+    </script>
+</body>
+</html>
